@@ -1,0 +1,2 @@
+Logo image saved as logo.png - use picture1 provided by user
+Background image saved as portal-bg.jpg - use portal background provided by user
