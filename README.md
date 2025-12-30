@@ -48,7 +48,7 @@ A modern student academic management system with biometric authentication using 
 ### Step 1: Install Backend Dependencies
 
 ```powershell
-cd c:/Users/afroz/CodeBuddy/20251125214834
+cd
 npm install
 ```
 
@@ -77,7 +77,7 @@ This will install:
 Open a PowerShell terminal in the project root:
 
 ```powershell
-cd c:/Users/afroz/CodeBuddy/20251125214834
+cd
 npm run dev
 ```
 
@@ -96,7 +96,7 @@ The backend will:
 Open a **NEW** PowerShell terminal:
 
 ```powershell
-cd c:/Users/afroz/CodeBuddy/20251125214834/client
+cd file/client
 npm run dev
 ```
 
@@ -298,7 +298,7 @@ To access from other devices on your network:
 Edit `src/init.ts` and add:
 
 ```typescript
-addStudent.run('S12346', 'John Doe', 'password:john123', new Date().toISOString());
+addStudent.run('S12346', 'omar ibn wazed', 'password:omar123', new Date().toISOString());
 ```
 
 ### Add More Courses
