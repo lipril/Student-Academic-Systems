@@ -2,7 +2,7 @@
 
 A modern student academic management system with biometric authentication using Windows Hello Face/Touch ID (WebAuthn), featuring a neon matrix-themed UI designed for computer science students.
 
-## Features
+# Features
 
 - **Secure Login**
   - Student ID + Password
