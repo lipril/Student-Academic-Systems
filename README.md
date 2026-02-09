@@ -52,13 +52,6 @@ cd
 npm install
 ```
 
-This will install:
-- express
-- better-sqlite3 (prebuilt binaries for Windows)
-- @simplewebauthn/server
-- cors
-- TypeScript and dev dependencies
-
 ### Step 2: Install Frontend Dependencies
 
 ```powershell
@@ -66,11 +59,6 @@ cd client
 npm install
 ```
 
-This will install:
-- react + react-dom
-- vite
-- tailwindcss + autoprefixer + postcss
-- TypeScript
 
 ### Step 3: Start Backend Server
 
@@ -86,11 +74,6 @@ You should see:
 API running at http://localhost:3000
 ```
 
-The backend will:
-- Create `academic.db` SQLite database
-- Seed demo data (Student ID: S12345, Password: demo)
-- Start API on port 3000
-
 ### Step 4: Start Frontend Dev Server
 
 Open a **NEW** PowerShell terminal:
@@ -100,12 +83,6 @@ cd file/client
 npm run dev
 ```
 
-You should see:
-```
-  VITE v5.x.x  ready in xxx ms
-
-  ➜  Local:   http://localhost:5173/
-```
 
 ### Step 5: Open the Application
 
@@ -181,62 +158,7 @@ All endpoints run on `http://localhost:3000/api`:
 
 ## Deployment
 
-### Option 1: Deploy to Cloud (Recommended for Production)
-
-#### Frontend (Vercel)
-
-1. Install Vercel CLI:
-   ```powershell
-   npm install -g vercel
-   ```
-
-2. Deploy frontend:
-   ```powershell
-   cd client
-   vercel
-   ```
-
-3. Follow prompts:
-   - Login to Vercel
-   - Set project name
-   - Framework: Vite
-   - Build command: `npm run build`
-   - Output directory: `dist`
-
-4. Update frontend API URL in `client/src/api.ts`:
-   ```typescript
-   const API = 'https://your-backend.onrender.com/api';
-   ```
-
-#### Backend (Render)
-
-1. Create `render.yaml`:
-   ```yaml
-   services:
-     - type: web
-       name: academic-system-api
-       env: node
-       buildCommand: npm install && npm run build
-       startCommand: npm start
-       envVars:
-         - key: NODE_ENV
-           value: production
-   ```
-
-2. Push to GitHub
-
-3. Connect to Render.com:
-   - Create new Web Service
-   - Connect GitHub repo
-   - Auto-deploy enabled
-
-4. For persistent SQLite, add disk storage in Render dashboard
-
-**Alternative Backend Hosts:**
-- Railway.app (easy SQLite persistence)
-- Fly.io (global edge deployment)
-
-### Option 2: Local Network Access
+# Local Network Access
 
 To access from other devices on your network:
 
@@ -324,7 +246,7 @@ Edit `client/src/App.tsx` and modify Tailwind classes:
 ## Project Structure
 
 ```
-c:/Users/afroz/CodeBuddy/20251125214834/
+c:/Users/lipril
 ├── src/                     # Backend source
 │   ├── server.ts           # Express server and routes
 │   ├── db.ts               # SQLite connection
@@ -357,8 +279,3 @@ For issues or questions:
 3. Ensure both servers are running
 4. Check browser console for errors
 
----
-
-**Made for Computer Science Students** 🚀
-
-Neon matrix vibes, biometric security, zero ML dependencies.
